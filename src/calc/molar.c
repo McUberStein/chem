@@ -85,10 +85,10 @@ float handle_element(sstring_t str){
     return -1;
   float ra_mass;
   uint nums;
-  int size = (strlen(str) > sizeof(str)) ? strlen(str) : sizeof(str);
+  int size = strlen(str)+1;
   char *strbuff = malloc(size);
   char *numbuff = malloc(size);
-  char *el_buff = malloc(sizeof(char) * strlen(str));
+  char *el_buff = malloc(sizeof(char) * (strlen(str)+1));
   numloc_t *T = numloc(str);
   if(T->count == 0){
     return relative_atomic_mass(str);
