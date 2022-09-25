@@ -8,7 +8,7 @@ To compile the library, run `make` in the directory with the Makefile. An 'out' 
 To install, run `make install` with root privileges. This will install the .so to `/usr/local/lib/` and the headers to `/usr/local/include/chem/`
 
 # Usage
-Chem types:
+Chem types:  
         * elenum_t, defined as `typedef unsigned short elenum_t`  
         * elestate_t, defined as `typedef enum {solid = 1, gas, liquid, unknown} elestate_t`  
         * elenium_t, defined as `typedef enum{`ALL 118 element signs`, ERR = 4000} elenium_t`  
