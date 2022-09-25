@@ -5,15 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef unsigned int uint;
 float handle_element(sstring_t str);
 
-uint intcat(uint x, uint y){
-  uint pow = 10;
-  while(y >= pow)
-    pow *= 10;
-  return x * pow + y;
-}
 
 char *strrev(char *str){
   char *p1, *p2;
@@ -85,10 +78,10 @@ float handle_element(sstring_t str){
     return -1;
   float ra_mass;
   uint nums;
-  int size = strlen(str)+1;
+  int size = (strlen(str) > sizeof(str)) ? strlen(str) : sizeof(str);
   char *strbuff = malloc(size);
   char *numbuff = malloc(size);
-  char *el_buff = malloc(sizeof(char) * (strlen(str)+1));
+  char *el_buff = malloc(sizeof(char) * strlen(str));
   numloc_t *T = numloc(str);
   if(T->count == 0){
     return relative_atomic_mass(str);

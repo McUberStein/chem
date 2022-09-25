@@ -34,10 +34,7 @@ int parse_elements(sstring_t solution, char p_list[MAX_ELS][10]){
             p_list[n][j++] = '\0';
         }
 
-        if(isupper(solution[i])){
-            p_list[n][j++] = solution[i];
-        }
-        if(islower(solution[i]) || isdigit(solution[i])){
+        if(isupper(solution[i]) || islower(solution[i]) || isdigit(solution[i])){
             p_list[n][j++] = solution[i];
         }
         if(isupper(solution[i+1]) && !bracket){
@@ -86,19 +83,4 @@ numloc_t *numloc(sstring_t str){
             break;
     }
     return &__number_location_test_type;
-}
-
-brackloc_t *brackloc(sstring_t str){
-    static brackloc_t __brackloc_test_t;
-    __brackloc_test_t.str = str;
-    __brackloc_test_t.count = 0;
-    int n = 0;
-
-    for(int i = 0; 1; i++){
-        if(str[i] == '(' || str[i] == ')')
-            __brackloc_test_t.locations[n] = i+1, __brackloc_test_t.count++, n++;
-        if(str[i] == '\0')
-            break;
-    }
-    return &__brackloc_test_t;
 }

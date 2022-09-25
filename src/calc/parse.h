@@ -14,7 +14,6 @@ typedef struct{
   unsigned short count;
   int locations[];
 } numloc_t;
-typedef numloc_t brackloc_t;
 
 
 extern char parsed_list[MAX_ELS][10];
@@ -28,6 +27,5 @@ void clearbuff(char buff[MAX_ELS][10]);
 bool onlist(sstring_t str);
 bool check_elements();
 numloc_t *numloc(sstring_t str);
-brackloc_t *brackloc(sstring_t str);
 
 #endif
