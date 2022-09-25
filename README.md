@@ -14,11 +14,11 @@ To install, run `make install` with root privileges. This will install the .so t
 * elenium_t, defined as `typedef enum{`ALL 118 element signs`, ERR = 4000} elenium_t`  
 * elestring_t, defined as `typedef const char* elestring_t`  
 * element_t, defined as `typedef struct{ `<br />`
-                            elestring_t name, sign;  
-                            float mass;  
-                            elenum_t group, period, atomic;  
-                            elestate_t stp_state;  
-                            bool radioactive;  
+                            elestring_t name, sign; `<br />`  
+                            float mass; `<br />`
+                            elenum_t group, period, atomic; `<br />`
+                            elestate_t stp_state; `<br />`
+                            bool radioactive; `<br />`
                             } element_t`  
 ## Global chem variables:  
 * `extern elestring_t list[]` = A list of all element signs  
