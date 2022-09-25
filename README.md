@@ -21,10 +21,10 @@ Chem types:
                                bool radioactive;  
                                } element_t`  
 Global chem variables:  
-        - `extern elestring_t list[]` = A list of all element signs  
-        - `extern elestring_t list_long[]` = A list of all element names  
-        - `extern int n_of_elements` = The number of elements in list  
+* `extern elestring_t list[]` = A list of all element signs  
+* `extern elestring_t list_long[]` = A list of all element names  
+* `extern int n_of_elements` = The number of elements in list  
 
 Chem functions:  
-      - `element_t *element_by_name(elestring_t name)` = Searches for element in list_long[], returns an element_t struct pointer if found, else returns NULL  
-      - `element_t *element_by_sign(elestring_t sign)` = Searches for element in list[], return same as `element_by_name`  
+* `element_t *element_by_name(elestring_t name)` = Searches for element in list_long[], returns an element_t struct pointer if found, else returns NULL  
+* `element_t *element_by_sign(elestring_t sign)` = Searches for element in list[], return same as `element_by_name`  
