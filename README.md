@@ -9,17 +9,17 @@ To install, run `make install` with root privileges. This will install the .so t
 
 # Usage
 Chem types:  
-        * elenum_t, defined as `typedef unsigned short elenum_t`  
-        * elestate_t, defined as `typedef enum {solid = 1, gas, liquid, unknown} elestate_t`  
-        * elenium_t, defined as `typedef enum{`ALL 118 element signs`, ERR = 4000} elenium_t`  
-        * elestring_t, defined as `typedef const char* elestring_t`  
-        * element_t, defined as `typedef struct{  
-                                        elestring_t name, sign;  
-                                        float mass;  
-                                        elenum_t group, period, atomic;  
-                                        elestate_t stp_state;  
-                                        bool radioactive;  
-                                        } element_t`  
+* elenum_t, defined as `typedef unsigned short elenum_t`  
+* elestate_t, defined as `typedef enum {solid = 1, gas, liquid, unknown} elestate_t`  
+* elenium_t, defined as `typedef enum{`ALL 118 element signs`, ERR = 4000} elenium_t`  
+* elestring_t, defined as `typedef const char* elestring_t`  
+* element_t, defined as `typedef struct{  
+                               elestring_t name, sign;  
+                               float mass;  
+                               elenum_t group, period, atomic;  
+                               elestate_t stp_state;  
+                               bool radioactive;  
+                               } element_t`  
 Global chem variables:  
         - `extern elestring_t list[]` = A list of all element signs  
         - `extern elestring_t list_long[]` = A list of all element names  
