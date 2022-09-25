@@ -31,3 +31,5 @@ typedef struct{
 ## Chem functions:  
 * `element_t *element_by_name(elestring_t name)` = Searches for element in list_long[], returns an element_t struct pointer if found, else returns NULL  
 * `element_t *element_by_sign(elestring_t sign)` = Searches for element in list[], return same as `element_by_name`  
+* `float molar_mass(char *solution)` = Calculates the molar mass of a solution, returns molar mass if calculated correctly, else -1. Formatting: H3PO4 **or** Na(OH2)4
+* `float relative_atomic_mass(elestring_t element)` = Returns the relative atomic mass of an element, else -1
