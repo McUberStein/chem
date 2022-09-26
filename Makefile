@@ -11,7 +11,7 @@ CHEMDIR = $(INCLUDE)/chem
 
 all: chem
 chem:
-	@-mkdir -p out/{elements,calc} &> /dev/null 
+	@-mkdir -p out/elements && mkdir out/calc 
 	@-mkdir out/obj
 	@cp src/libchem.h out/ && cp src/chem.c out/ 
 	@cp src/elements/* out/elements/
